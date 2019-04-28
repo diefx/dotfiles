@@ -1,0 +1,5 @@
+[user]
+	name = Diego
+	email = diego@diefx.com
+[core]
+	editor = nvim

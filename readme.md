@@ -59,4 +59,39 @@ Since i'm an electrical engineer, i like to play arount with embedded systems
 $ sudo pacman -S arm-none-eabi-gcc arm-none-eabi-newlib openocd
 ```
 
+Tilling window manager system
+------------------------------
+First thing first, so let's install X11
+```bash
+$ sudo pacman  -S xorg-xserver xorg-xinit
+```
+
+Instal videodrivers (curretnly i'm running my system on VirtualBox
+```bash
+sudo pacman -S virtualbox-guest-modules-arch virtualbox-guest-utils
+```
+
+Create the following file
+```bash
+sudo nvim /etc/modules-load.d/virtualbox.conf 
+inside he file write
+vboxguest
+vboxsf
+vboxvideo
+```
+
+Then our windows manager
+```bash
+sudo pacman -S bspwm sxkhd
+```
+
+And something very important, the terminal, since we ned true color support to get more eyecandy we need urxvt true 
+colors version wich is not included in the Arch official repositories, so...
+```bash
+git clone https://aur.archlinux.org/rxvt-unicode-truecolor.git
+cd rxvt-unicode-truecolor
+makepkg -si
+cd .. 
+rm -r rxvt-unicode-truecolor
+```
 

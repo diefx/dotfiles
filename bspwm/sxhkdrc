@@ -1,0 +1,77 @@
+#
+# wm independent hotkeys
+#
+
+# launcher Applications
+# ----------------------------------
+
+# Program launcher
+super + @space
+	rofi -show run -lines 3 -eh 2 -width 80 -padding 200 -bw 0 -opacity "70" -separator-style "none" -font "Inconsolata 18"
+
+# Terminal emulator
+super + Return
+	urxvt
+
+# Web browser
+super + f
+	firefox
+
+# Windows
+super + w
+    VBoxManage startvm windows
+
+
+# Bspwm hotkeys
+# -----------------------------------
+
+# Quit bspwm normally
+super + alt + Escape
+	bspc quit
+
+# Reload sxhkd configuration
+super + Escape
+	pkill -USR1 -x sxhkd
+
+
+# Focus/swap configuration
+# ----------------------------------
+
+# focus the node in the given direction
+super + {_,shift +}{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus or send to the left or right desktop
+super + alt + {Right,Left}
+	DIR={next,prev}; \
+ 	bspc {desktop -f,node -d} "$DIR"
+	
+ #focus or send to the given desktop
+ super + {_,shift + }{1-9,0}
+ 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+
+# Preselections
+# ----------------------------------
+
+# Preselect the direction
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -p {west,south,north,east}
+
+# cancel the preselection
+super + ctrl + Escape
+	bspc node -p cancel
+
+
+# Move and Resize
+# -----------------------------------
+
+# expand a window by moving one of its side outward                                         
+ctrl + alt + {Left,Down,Up,Right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}                          
+
+# contract a window by moving one of its side inward                                        
+ctrl + shift + {Left,Down,Up,Right}                                                   
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+

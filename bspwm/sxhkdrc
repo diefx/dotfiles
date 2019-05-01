@@ -17,10 +17,6 @@ super + Return
 super + f
 	firefox
 
-# Windows
-super + w
-    VBoxManage startvm windows
-
 
 # Bspwm hotkeys
 # -----------------------------------

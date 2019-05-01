@@ -11,6 +11,8 @@ alias nvimrc="nvim ~/.config/nvim/init.vim"
 alias readmerc="nvim ~/.config/readme.md"
 alias xresourcesrc="nvim ~/.config/.Xresources"
 alias xresourcesrst="xrdb ~/.config/.Xresources"
+alias bspwmrc="nvim ~/.config/bspwm/bspwmrc"
+alias sxhkdrc="nvim ~/.config/bspwm/sxhkdrc"
 
 alias tree="tree -CaL"
 

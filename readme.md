@@ -18,31 +18,15 @@ Configuration
 -------------
 Set our shell to look into the right directory for its configuration files
 ```bash
-$ sudo echo "ZDOTDIR=~/.config/zsh" > /etc/zsh/zshenv 
+$ sudo nvim /etc/zsh/zshenv
+# write the following line and save file
+ZDOTDIR=~/.config/zsh 
 ```
 
-__Create .config directory strucutre for our several configuration files__, get the file
-from:
+Clone dotfiles from github
 ```bash
-git clone https://github.com/diefx/dotfiles.git ~/.config.git
-```
-
-If for some reason your not clonning this repo, you can create the config structure
-
-Move ths zshrc file to config directory
-```bash
-$ mkdir ~/.config/zsh
-$ mv ~/.zshrc ~/.config/zsh/.zshrc
-```
-
-Create nvim config file
-```bash
-$ mkdir ~/.config/nvim && touch ~/.config/nvim/init.vim
-```
-
-Set git config in the right place
-```bash
-$ mkdir ~/.config/git && touch ~/.config/git/config
+cd ~
+git clone https://github.com/diefx/dotfiles.git ~/.config
 ```
 
 Cleaning up the system
@@ -53,7 +37,7 @@ $ sudo pacman -R vi nvim nano
 ```
 
 Install embedded utilities to work with microcontrollers
----------------------------
+--------------------------------------------------------
 Since i'm an electrical engineer, i like to play arount with embedded systems
 ```bash
 $ sudo pacman -S arm-none-eabi-gcc arm-none-eabi-newlib openocd
@@ -84,5 +68,10 @@ cd rxvt-unicode-truecolor
 makepkg -si
 cd .. 
 rm -r rxvt-unicode-truecolor
+```
+
+Create symlink to xinitrc file
+```bash
+$ ln -s .config/.xinitrc .xinitrc
 ```
 

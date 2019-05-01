@@ -16,5 +16,5 @@ bspc config normal_border_color     "#1E2127"
 bspc config focused_border_color    "#5C6370"
 bspc config presel_feedback_color   "#5C6370"
 
-$HOME/.config/polybar/polybar.sh
+polybar mybar -c ~/.config/polybar/config &
 

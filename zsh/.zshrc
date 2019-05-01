@@ -13,6 +13,7 @@ alias xresourcesrc="nvim ~/.config/.Xresources"
 alias xresourcesrst="xrdb ~/.config/.Xresources"
 alias bspwmrc="nvim ~/.config/bspwm/bspwmrc"
 alias sxhkdrc="nvim ~/.config/bspwm/sxhkdrc"
+alias xinitrc="nvim ~/.config/.xinitrc"
 
 alias tree="tree -CaL"
 

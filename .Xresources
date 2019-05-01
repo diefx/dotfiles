@@ -1,0 +1,8 @@
+!Remove scrollbar
+URxvt.scrollBar:   false
+URxvt*font: xft:DejaVu Sans Mono:size=11
+
+URxvt.cursorColor: #D64937
+URxvt.background:  #2D2D2D
+URxvt.foreground:  #DCDCDC
+

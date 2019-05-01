@@ -1,4 +1,3 @@
-echo "adios mundo"
 
 #-- most useful alias commands
 alias ls="ls -CF --color=auto"
@@ -14,6 +13,7 @@ alias xresourcesrst="xrdb ~/.config/.Xresources"
 alias bspwmrc="nvim ~/.config/bspwm/bspwmrc"
 alias sxhkdrc="nvim ~/.config/bspwm/sxhkdrc"
 alias xinitrc="nvim ~/.config/.xinitrc"
+alias rofirc="nvim ~/.config/rofi/config"
 
 alias tree="tree -CaL"
 

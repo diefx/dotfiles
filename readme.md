@@ -52,27 +52,26 @@ $ sudo pacman  -S xorg-apps xorg-xserver xorg-xinit
 
 Instal videodrivers (curretnly i'm running my system on VirtualBox
 ```bash
-sudo pacman -S virtualbox-guest-modules-arch virtualbox-guest-utils
+$ sudo pacman -S virtualbox-guest-modules-arch virtualbox-guest-utils
 ```
 
-Then our windows manager
+Then our windows manager nad also app launcher
 ```bash
-sudo pacman -S bspwm sxkhd
+$ sudo pacman -S bspwm sxkhd rofi
 ```
 
-Application launcher
+Before to continue lets install our AUR helper yay
 ```bash
-$ sudo pacman -S rofi
+$ git clone https://aur.archlinux.org/yay.git
+$ cd yay
+$ makepkg -si
+$ cd ..
+$ sudo rm -r yay 
 ```
 
-And something very important, the terminal, since we ned true color support to get more eyecandy we need urxvt true 
-colors version wich is not included in the Arch official repositories, so...
+Now we can instal two important compoenets, polybar and our terminal with true color support
 ```bash
-git clone https://aur.archlinux.org/rxvt-unicode-truecolor.git
-cd rxvt-unicode-truecolor
-makepkg -si
-cd .. 
-rm -r rxvt-unicode-truecolor
+$yay -Ss rxvt-unicode-trucolor polybar
 ```
 
 

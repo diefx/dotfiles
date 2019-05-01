@@ -63,21 +63,12 @@ Tilling window manager system
 ------------------------------
 First thing first, so let's install X11
 ```bash
-$ sudo pacman  -S xorg-xserver xorg-xinit
+$ sudo pacman  -S xorg-apps xorg-xserver xorg-xinit
 ```
 
 Instal videodrivers (curretnly i'm running my system on VirtualBox
 ```bash
 sudo pacman -S virtualbox-guest-modules-arch virtualbox-guest-utils
-```
-
-Create the following file
-```bash
-sudo nvim /etc/modules-load.d/virtualbox.conf 
-inside he file write
-vboxguest
-vboxsf
-vboxvideo
 ```
 
 Then our windows manager

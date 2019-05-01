@@ -3,13 +3,13 @@ URxvt.scrollBar:      false
 URxvt*font:           xft:DejaVu Sans Mono:size=11
 URxvt.internalBorder: 25
 
-!Color theme (one dark)
+!Color theme (one dark) reference https://github.com/logico-dev/Xresources-themes
 URxvt.cursorColor:    #ABB2BF
-URxvt.background:     #1E2127
+URxvt.background:     #282C34
 URxvt.foreground:     #5C6370
 URxvt.highlightColor: #3A3F4B
 !Black & gray
-URxvt.color0:         #1E2127
+URxvt.color0:         #282C34
 URxvt.color8:         #5C6370
 !Red
 URxvt.color1:         #E06C75

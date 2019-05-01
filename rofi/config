@@ -1,0 +1,18 @@
+!Window layout
+rofi.width:          50
+rofi.columns:        1
+rofi.lines:          5
+rofi.bw:             3
+rofi.padding:        7
+!rofi.font:          "Dejavu Sans 11"
+rofi.hide-scrollbar: true
+
+!Colorscheme (emulate one-dark)
+rofi.color-enabled:    true
+!                  bg       border   separator
+rofi.color-window: #282C34, #5C6370, #5C6370
+!                  bg       fg       bg-alt   hl-bg    hl-fg
+rofi.color-normal: #282C34, #5C6370, #282C34, #D19A66, #282C34
+rofi.color-urgent: #282C34, #5C6370, #282C34, #D19A66, #282C34
+rofi.color-active: #282C34, #5C6370, #282C34, #D19A66, #282C34
+

@@ -60,6 +60,11 @@ Then our windows manager
 sudo pacman -S bspwm sxkhd
 ```
 
+Application launcher
+```bash
+$ sudo pacman -S rofi
+```
+
 And something very important, the terminal, since we ned true color support to get more eyecandy we need urxvt true 
 colors version wich is not included in the Arch official repositories, so...
 ```bash
@@ -70,8 +75,4 @@ cd ..
 rm -r rxvt-unicode-truecolor
 ```
 
-Create symlink to xinitrc file
-```bash
-$ ln -s .config/.xinitrc .xinitrc
-```
 

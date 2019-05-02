@@ -55,9 +55,9 @@ Instal videodrivers (curretnly i'm running my system on VirtualBox
 $ sudo pacman -S virtualbox-guest-modules-arch virtualbox-guest-utils
 ```
 
-Then our windows manager nad also app launcher
+Then our windows manager and also app launcher
 ```bash
-$ sudo pacman -S bspwm sxkhd rofi
+$ sudo pacman -S bspwm sxkhd rofi feh
 ```
 
 Before to continue lets install our AUR helper yay
@@ -74,4 +74,8 @@ Now we can instal two important compoenets, polybar and our terminal with true c
 $yay -Ss rxvt-unicode-trucolor polybar
 ```
 
+Fonts and more fonts
+```bash
+$ sudo pacman -S ttf-inconsolata ttf-dejavu powerline-fonts
+```
 

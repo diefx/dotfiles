@@ -1,9 +1,21 @@
 Rising the system
 -----------------
 
-After a fresh intallation of arch linux manjaro no gui enviroemtn of any kind niether
-display server like X11, we sould proceede to install some useful binaries and also
-make some tweeks that allos to keep in a good shape our configuration files and a very
+Fresh intallation of arch linux anarchy with the following packages:
+
+```bash
+base alsa-utils base-devel bspwm cpupower dialog grub gvfs
+gvfs-mtp gvfs-smb lightdm lightdm-gtk-greeter 
+lightdm-gtk-greeter-settings linux-headers networkmanager
+networkmanager-applet pavucontrol pulseaudio pulseaudio-alsa
+screenfetch sxhkd ttf-dejavu unzip vim
+virtualbox-guest-modules-arch virtualbox-guest-utils wget
+xdg-user-dirs xorg-apps xorg-server xorg-init xterm yay zsh
+zsh-syntax-highlighting
+```
+
+Then we sould proceede to install some useful binaries and also
+make some tweeks that allows to keep in a good shape our configuration files and a very
 clean home folder
 
 
@@ -76,6 +88,6 @@ $yay -Ss rxvt-unicode-trucolor polybar
 
 Fonts and more fonts
 ```bash
-$ sudo pacman -S ttf-inconsolata ttf-dejavu powerline-fonts
+$ sudo pacman -S ttf-inconsolata powerline-fonts
 ```
 

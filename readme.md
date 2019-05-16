@@ -17,7 +17,7 @@ Installation of several packages
 --------------------------------
 Install editor, versioning coding, etc..
 ```bash
-$ sudo pacman -S neovim tree git bspwm sxkhd rofi feh
+$ sudo pacman -S neovim tree git bspwm sxkhd rofi feh xorg-apps xorg-xserver xorg-xinit virtualbox-guest-modules-arch virtualbox-guest-utils
 ```
 
 Configuration
@@ -34,21 +34,12 @@ Cleaning up the system
 Remove some unnecesari packages to keep our system as clean as possible
 ```bash
 $ sudo pacman -R vi nvim nano
+$ rm .zshrc .bash*
 ```
 
-Tilling window manager system
-------------------------------
-First thing first, so let's install X11
-```bash
-$ sudo pacman  -S xorg-apps xorg-xserver xorg-xinit
-```
-
-Instal videodrivers (curretnly i'm running my system on VirtualBox
-```bash
-$ sudo pacman -S virtualbox-guest-modules-arch virtualbox-guest-utils
-```
-
-Before to continue lets install our AUR helper yay
+AUR package manager and some packages 
+-------------------------------------
+Before to continue lets install our AUR helper _yay_
 ```bash
 $ git clone https://aur.archlinux.org/yay.git
 $ cd yay
@@ -57,9 +48,9 @@ $ cd ..
 $ sudo rm -r yay 
 ```
 
-Now we can instal two important compoenets, polybar and our terminal with true color support
+Now we can instal two important components, polybar and our terminal with true color support
 ```bash
-$yay -S rxvt-unicode-trucolor polybar
+$yay -S rxvt-unicode-truecolor polybar
 ```
 
 Fonts and more fonts
@@ -69,6 +60,14 @@ $ sudo pacman -S ttf-dejavu ttf-inconsolata
 
 Clone dotfiles from github
 ```bash
-cd ~
-git clone https://github.com/diefx/dotfiles.git ~/.config
+$ cd ~
+$ git clone https://github.com/diefx/dotfiles.git ~/.config
 ```
+
+Neovim Plug manager
+```bash
+$ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# inside vim run
+:PlugInstall
+```
+

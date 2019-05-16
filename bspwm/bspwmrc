@@ -3,7 +3,7 @@
 #launch key demon
 sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 #set wallpaper
-feh --bg-scale "$HOME/.config/wallpapers/galaxy.jpg" &
+feh --bg-scale "$HOME/.config/wallpapers/mono.png" &
 
 bspc monitor -d I II III IV V VI VII VIII
 

@@ -5,7 +5,7 @@ sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 #set ultrawide resolution
 xrandr --output VGA-1 --mode 3440x1440 &
 #set wallpaper
-$HOME/.config/wallpapers/fehbg.sh &
+$HOME/.config/feh/fehbg.sh &
 
 #defines monitors
 bspc monitor -d terminal internet embedded debug files music misc
@@ -24,9 +24,9 @@ bspc config presel_feedback_color   "#5C6370"
 
 #startup applications
 #bspc rule -a URxvt -o desktop=terminal state=floating rectangle=1152x600+70+70 && urxvt &
-bspc rule -a URxvt -o desktop=terminal && urxvt &
-bspc rule -a Firefox -o desktop=internet && firefox &
-bspc rule -a URxvt -o desktop=embedded && urxvt -e nvim -O ~/Framework/test/{main,inits,interrupts}.c &
+bspc rule -a URxvt -o desktop=^1 && urxvt &
+bspc rule -a Firefox -o desktop=^2 && firefox &
+bspc rule -a URxvt -o desktop=^3 && urxvt -e nvim -O ~/Framework/test/{main,inits,interrupts}.c &
 
 #launch Polybar
 killall -q polybar

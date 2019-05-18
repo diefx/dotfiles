@@ -33,3 +33,8 @@ URxvt.color14:        #56B6C2
 URxvt.color7:         #ABB2BF
 URxvt.color15:        #FFFFFF
 
+!copy paste key bindings
+URxvt.iso14755:                false
+URxvt.keysym.Shift-Control-V:  eval:paste_clipboard
+URxvt.keysym.Shift-Control-C:  eval:selection_to_clipboard
+

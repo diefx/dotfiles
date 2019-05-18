@@ -55,7 +55,7 @@ $yay -S rxvt-unicode-truecolor polybar
 
 Fonts and more fonts
 ```bash
-$ sudo pacman -S ttf-dejavu ttf-inconsolata
+$ sudo pacman -S ttf-dejavu ttf-inconsolata awesome-terminal-fonts
 ```
 
 Clone dotfiles from github

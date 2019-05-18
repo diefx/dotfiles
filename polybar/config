@@ -106,8 +106,9 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/bspwm
 format = <label-state>
 
-format-prefix = "  "
-format-prefix-foreground = ${colors.yellow}
+format-prefix = "    "
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.yellow}
 
 label-focused-underline= ${colors.yellow}
 label-focused-padding = 2

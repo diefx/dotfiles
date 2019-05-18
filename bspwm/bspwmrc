@@ -31,5 +31,5 @@ bspc rule -a URxvt -o desktop=embedded && urxvt -e nvim -O ~/Framework/test/{mai
 #launch Polybar
 killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
-polybar mybar -c ~/.config/polybar/config &
+polybar mybar -r -c ~/.config/polybar/config &
 

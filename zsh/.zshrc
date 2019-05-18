@@ -4,6 +4,8 @@ alias startx="startx ~/.config/X11/.xinitrc"
 alias ls="ls -CF --color=auto"
 alias ll="ls -lisa --color=auto"
 alias home="cd ~"
+alias dotfiles="cd ~/.config"
+alias tree="tree -CaL"
 
 alias zshrc="nvim ~/.config/zsh/.zshrc"
 alias zshrst="source ~/.config/zsh/.zshrc"
@@ -17,7 +19,13 @@ alias xinitrc="nvim ~/.config/X11/.xinitrc"
 alias rofirc="nvim ~/.config/rofi/config"
 alias polybarrc="nvim ~/.config/polybar/config"
 
-alias tree="tree -CaL"
+#--git commads shorcutes
+alias gits="git status"
+alias gita="git add"
+alias gitc="git commit"
+alias gitchk="git checkout"
+alias gitl="git log --oneline"
+
 
 #--Enable autompletion
 autoload -Uz compinit

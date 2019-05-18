@@ -5,7 +5,7 @@ sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 #set ultrawide resolution
 xrandr --output VGA-1 --mode 3440x1440 &
 #set wallpaper
-feh --bg-scale "$HOME/.config/wallpapers/mono.png" &
+$HOME/.config/wallpapers/fehbg.sh &
 
 #defines monitors
 bspc monitor -d terminal internet embedded debug files music misc

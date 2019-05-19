@@ -17,7 +17,7 @@ Installation of several packages
 --------------------------------
 Install editor, versioning coding, etc..
 ```bash
-$ sudo pacman -S neovim tree git bspwm sxkhd rofi feh xorg-apps xorg-xserver xorg-xinit virtualbox-guest-modules-arch virtualbox-guest-utils
+$ sudo pacman -S neovim tree git bspwm sxkhd rofi feh xorg-apps xorg-xserver xorg-xinit virtualbox-guest-modules-arch virtualbox-guest-utils unzip awesome-terminal-fonts
 ```
 
 Configuration
@@ -53,9 +53,15 @@ Now we can instal two important components, polybar and our terminal with true c
 $yay -S rxvt-unicode-truecolor polybar
 ```
 
-Fonts and more fonts
+Install __Powerline fonts__
 ```bash
-$ sudo pacman -S ttf-dejavu ttf-inconsolata awesome-terminal-fonts
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+sudo cp ~/.local/share/fonts/*.ttf /usr/share/fonts/TTF/
+sudo rm -r ~/.local/share/fonts
 ```
 
 Clone dotfiles from github

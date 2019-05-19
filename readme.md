@@ -4,8 +4,12 @@ Rising the system
 Fresh intallation of arch linux anarchy with the following packages:
 
 ```bash
-base base-devel cpupower dialog grub linux-headers 
-networkmanager screenfetch vim wget zsh
+base alsa-utils base-devel bspwm cpupower dialog grub gvfs 
+gvfs-mtp gvfs-smb linux-headers networkmanager 
+network-manager-applet pavucontrol pulseaudio pulseaudio-alsa 
+screenfetch sxhkd ttf-dejavu unzip vim 
+virtualbox-guest-modules-arch virtualbox-guest-utils wget 
+xdg-users-dirs xorg-apps xorg-server xorg-xinit xterm yay zsh  
 zsh-syntax-highlighting
 ```
 
@@ -17,13 +21,19 @@ Installation of several packages
 --------------------------------
 Install editor, versioning coding, etc..
 ```bash
-$ sudo pacman -S neovim tree git bspwm sxkhd rofi feh xorg-apps xorg-xserver xorg-xinit virtualbox-guest-modules-arch virtualbox-guest-utils unzip awesome-terminal-fonts
+$ sudo pacman -S neovim tree git rofi feh awesome-terminal-fonts arm-none-eabi-gcc arm-none-eabi-newlib openocd firefox
+```
+
+Instal two important components, polybar and our terminal with true color support
+```bash
+$yay -S rxvt-unicode-truecolor polybar
 ```
 
 Configuration
 -------------
 Set our shell to look into the right directory for its configuration files
 ```bash
+$ sudo touch /etc/zsh/zshenv
 $ sudo nvim /etc/zsh/zshenv
 # write the following line and save file
 ZDOTDIR=~/.config/zsh 
@@ -31,28 +41,15 @@ ZDOTDIR=~/.config/zsh
 
 Cleaning up the system
 -----------------------
-Remove some unnecesari packages to keep our system as clean as possible
+Remove some unnecesary packages to keep our system as clean as possible
 ```bash
-$ sudo pacman -R vi nvim nano
-$ rm .zshrc .bash*
+$ sudo pacman -R vi vim nano xterm
+$ rm .bash* .xinit .zshrc
+$ rm -r .config
 ```
 
-AUR package manager and some packages 
--------------------------------------
-Before to continue lets install our AUR helper _yay_
-```bash
-$ git clone https://aur.archlinux.org/yay.git
-$ cd yay
-$ makepkg -si
-$ cd ..
-$ sudo rm -r yay 
-```
-
-Now we can instal two important components, polybar and our terminal with true color support
-```bash
-$yay -S rxvt-unicode-truecolor polybar
-```
-
+Fonts and dotfiles
+---------------------
 Install __Powerline fonts__
 ```bash
 git clone https://github.com/powerline/fonts.git --depth=1
@@ -76,4 +73,3 @@ $ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw
 # inside vim run
 :PlugInstall
 ```
-

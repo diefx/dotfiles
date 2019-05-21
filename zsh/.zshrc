@@ -61,6 +61,11 @@ alias gitc="git commit -m "
 alias gitchk="git checkout"
 alias gitl="git log --oneline"
 alias gitp="git push -u origin master"
+#--dowload audio from yutube
+# Download single entry
+alias ytmp3="youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 "
+# Download playlist
+alias ytplaylist="youtube-dl -ict --yes-playlist --extract-audio --audio-format mp3 --audio-quality 0 "
 
 #--Enable autompletion
 autoload -Uz compinit

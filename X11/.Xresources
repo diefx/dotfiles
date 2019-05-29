@@ -1,7 +1,7 @@
 !Remove scrollbar
 URxvt.scrollBar:      false
 URxvt*font:           xft:DejaVu Sans Mono for Powerline:size=11,xft:FontAwesome:size=11
-URxvt.internalBorder: 25
+!URxvt.internalBorder: 25
 
 !Color theme (one dark) reference https://github.com/logico-dev/Xresources-themes
 URxvt.cursorColor:    #ABB2BF

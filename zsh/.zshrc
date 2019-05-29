@@ -54,6 +54,8 @@ alias xinitrc="nvim ~/.config/X11/.xinitrc"
 alias rofirc="nvim ~/.config/rofi/config"
 alias polybarrc="nvim ~/.config/polybar/config"
 alias gitignore="nvim ~/.config/.gitignore"
+alias zathurarc="nvim ~/.config/zathura/zathurarc"
+
 #--git commads shorcutes
 alias gits="git status"
 alias gita="git add ."

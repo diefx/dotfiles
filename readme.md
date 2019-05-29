@@ -21,7 +21,8 @@ Installation of several packages
 --------------------------------
 Install editor, versioning coding, etc..
 ```bash
-$ sudo pacman -S neovim tree git rofi feh awesome-terminal-fonts arm-none-eabi-gcc arm-none-eabi-newlib openocd firefox
+$ sudo pacman -S neovim tree git rofi feh awesome-terminal-fonts zathura zathura-pdf-poppler firefox 
+arm-none-eabi-gcc arm-none-eabi-newlib openocd
 ```
 
 Instal two important components, polybar and our terminal with true color support

@@ -29,6 +29,7 @@ bspc rule -a URxvt -o desktop='terminal' state=floating follow=on rectangle=1200
 #bspc rule -a URxvt -o desktop='terminal' && urxvt &
 #bspc rule -a URxvt desktop='terminal' follow=on
 bspc rule -a Firefox desktop='web' follow=on
+bspc rule -a '*:zathura' state=tiled
 #bspc rule -a URxvt -o desktop='embedded' && urxvt -e nvim -O ~/Framework/test/{main,inits,interrupts}.c &
 
 #launch Polybar

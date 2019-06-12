@@ -16,79 +16,91 @@
 ;
 ;==========================================================
 
+;----------------------------------------------------------
+;VARIABLES
+;----------------------------------------------------------
 [colors]
-;background = ${xrdb:color0:#222}
-background = #282C34
+background     = #282C34
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #5C6370
+foreground     = #5C6370
 foreground-alt = #5C6370
-primary = #D194A66
-secondary = #e60053
-alert = #bd2c40
-red = #E06C75
-green = #98C379
-yellow = #D19A66
-blue = #61AFEF
-magent = #C678DD
-cyan = #56B6C2
-white = #ABB2BF
+primary        = #D194A66
+secondary      = #e60053
+alert          = #bd2c40
+red            = #E06C75
+green          = #98C379
+yellow         = #D19A66
+blue           = #61AFEF
+magent         = #C678DD
+cyan           = #56B6C2
+white          = #ABB2BF
 
 
-
+;----------------------------------------------------------
+;BAR SETTINGS
+;----------------------------------------------------------
 [bar/mybar]
-;monitor = ${env:MONITOR:HDMI-1}
-width = 100%
-height = 27
-;offset-x = 1%
-;offset-y = 1%
-radius = 0.0
-fixed-center = false
+monitor                  = ${env:MONITOR:DP-1}
+bottom                   = false
+fixed-center             = false
+width                    = 100%
+height                   = 25
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background               = ${colors.background}
+foreground               = ${colors.foreground}
 
-line-size = 3
-line-color = #f00
+border-top-size          = 5
+border-top-color         = ${colors.background}
 
-border-size = 4
-border-color = ${colors.background}
+padding-left             = 2
+padding-right            = 2
 
-padding-left = 0
-padding-right = 2
+module-margin-left       = 2
+module-margin-right      = 2
 
-module-margin-left = 1
-module-margin-right = 2
+font-0                   = "DejaVu Sans Mono for Powerline:size=11;0"
+font-1                   = FontAwesome:pixelsize=13;1
 
-font-0 = "DejaVu Sans Mono for Powerline:size=11;0"
-font-1 = FontAwesome:pixelsize=13;1
+modules-left             = bspwm
+modules-center           = 
+modules-right            = filesystem pulseaudio xkeyboard memory cpu eth date
 
-modules-left = bspwm
-modules-center = 
-modules-right = filesystem pulseaudio xkeyboard memory cpu eth date
-
-tray-position = right
-tray-padding = 2
-
-cursor-click = pointer
-cursor-scroll = ns-resize
+cursor-click             = pointer
+cursor-scroll            = ns-resize
 
 
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
+;----------------------------------------------------------
+;BSPWM SETTINGS
+;----------------------------------------------------------
+[module/bspwm]
+type                     = internal/bspwm
+pin-workspaces           = true
+format                   = <label-state>
 
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.red}
+ws-icon-0                = terminal;
+ws-icon-1                = web;
+ws-icon-2                = coding;
+ws-icon-3                = debug;
+ws-icon-4                = files;
+ws-icon-5                = music;
+ws-icon-6                = misc;
+ws-icon-7                = process;
 
-label-layout = %layout%
-label-layout-underline = ${colors.red}
+format-prefix            = "    "
+format-prefix-foreground = ${colors.yellow}
 
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.red}
-label-indicator-underline = ${colors.red}
+label-focused            = %icon% %name%
+label-focused-foreground = ${colors.yellow}
+label-focused-padding    = 2
+
+label-occupied           = %icon% %name%
+label-occupied-padding   = 2
+
+label-urgent             = %icon% %name%
+label-urgent-padding     = 2
+
+label-empty              = %icon% %name%
+label-empty-padding      = 2
 
 
 [module/filesystem]
@@ -102,36 +114,26 @@ label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
 
-[module/bspwm]
-type = internal/bspwm
-format = <label-state>
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
 
-format-prefix = "    "
-format-prefix-foreground = ${colors.background}
-format-prefix-background = ${colors.yellow}
+format-prefix = " "
+format-prefix-foreground = ${colors.red}
 
-label-focused-underline= ${colors.yellow}
-label-focused-padding = 2
+label-layout = %layout%
 
-label-occupied-padding = 2
-label-occupied-foreground = ${colors.yellow}
-
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-foreground = ${colors.red}
 
 
 [module/cpu]
 type = internal/cpu
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.cyan}
+format-prefix-foreground = ${colors.cyan}
+;format-underline = ${colors.cyan}
 label = %percentage:2%%
 
 
@@ -139,19 +141,19 @@ label = %percentage:2%%
 type = internal/memory
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.magent}
+format-prefix-foreground = ${colors.magent}
+;format-underline = ${colors.magent}
 label = %percentage_used%%
 
 
 [module/eth]
 type = internal/network
-interface = enp0s3
+interface = enp9s0
 interval = 3.0
 
-format-connected-underline = ${colors.green}
+;format-connected-underline = ${colors.green}
 format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-prefix-foreground = ${colors.green}
 label-connected = %local_ip%
 
 format-disconnected =
@@ -200,8 +202,8 @@ time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.blue}
+format-prefix-foreground = ${colors.blue}
+;format-underline = ${colors.blue}
 
 label = %date% %time%
 

@@ -5,9 +5,9 @@ xrdb -I ~/.config/X11/.Xresources
 #launch key demon
 sxhkd -c ~/.config/bspwm/sxhkdrc &
 #set ultrawide resolution
-xrandr --output VGA-1 --mode 3440x1440
+xrandr --output HDMI-1 --off --output DP-1 --mode 3440x1440
 #set wallpaper
-~/.config/feh/fehbg.sh &
+feh --bg-scale '/home/diego/.config/feh/mono.png' &
 
 #defines monitors
 bspc monitor -d terminal web coding debug files music misc process

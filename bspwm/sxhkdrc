@@ -11,7 +11,7 @@ super + @space
 
 # Terminal emulator
 super + Return
-	urxvt
+	st
 
 # Web browser
 super + f

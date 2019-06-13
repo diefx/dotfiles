@@ -1,40 +1,33 @@
-!Remove scrollbar
-URxvt.scrollBar:      false
-URxvt*font:           xft:DejaVu Sans Mono for Powerline:size=11,xft:FontAwesome:size=11
-!URxvt.internalBorder: 25
+st.font:           DejaVu Sans Mono for Powerline:size=11
+st.alpha:          1
 
 !Color theme (one dark) reference https://github.com/logico-dev/Xresources-themes
-URxvt.cursorColor:    #ABB2BF
-URxvt.background:     #282C34
-URxvt.foreground:     #5C6370
-URxvt.highlightColor: #3A3F4B
+st.cursorColor:    #ABB2BF
+st.background:     #282C34
+st.foreground:     #5C6370
+st.highlightColor: #3A3F4B
 !Black & gray
-URxvt.color0:         #282C34
-URxvt.color8:         #5C6370
+st.color0:         #282C34
+st.color8:         #5C6370
 !Red
-URxvt.color1:         #E06C75
-URxvt.color9:         #E06C75
+st.color1:         #E06C75
+st.color9:         #E06C75
 !Green
-URxvt.color2:         #98C379
-URxvt.color10:        #98C379
+st.color2:         #98C379
+st.color10:        #98C379
 !Yellow
-URxvt.color3:         #D19A66
-URxvt.color11:        #D19A66
+st.color3:         #D19A66
+st.color11:        #D19A66
 !Blue
-URxvt.color4:         #61AFEF
-URxvt.color12:        #61AFEF
+st.color4:         #61AFEF
+st.color12:        #61AFEF
 !Magent
-URxvt.color5:         #C678DD
-URxvt.color13:        #C678DD
+st.color5:         #C678DD
+st.color13:        #C678DD
 !Cyan
-URxvt.color6:         #56B6C2
-URxvt.color14:        #56B6C2
+st.color6:         #56B6C2
+st.color14:        #56B6C2
 !White
-URxvt.color7:         #ABB2BF
-URxvt.color15:        #FFFFFF
-
-!copy paste key bindings
-URxvt.iso14755:                false
-URxvt.keysym.Shift-Control-V:  eval:paste_clipboard
-URxvt.keysym.Shift-Control-C:  eval:selection_to_clipboard
+st.color7:         #ABB2BF
+st.color15:        #FFFFFF
 

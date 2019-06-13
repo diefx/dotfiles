@@ -25,9 +25,9 @@ $ sudo pacman -S neovim tree git rofi feh awesome-terminal-fonts zathura zathura
 arm-none-eabi-gcc arm-none-eabi-newlib openocd
 ```
 
-Instal two important components, polybar and our terminal with true color support
+Instal two important components, polybar and our terminal with unicode and true color support
 ```bash
-$yay -S rxvt-unicode-truecolor polybar
+$yay -S st-luke-git polybar
 ```
 
 Configuration
@@ -45,7 +45,7 @@ Cleaning up the system
 Remove some unnecesary packages to keep our system as clean as possible
 ```bash
 $ sudo pacman -R vi vim nano xterm
-$ rm .bash* .xinit .zshrc
+$ rm .bash* .xinitrc .zshrc
 $ rm -r .config
 ```
 
@@ -76,6 +76,7 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.local/share/oh-my-zsh
 Neovim Plug manager
 ```bash
 $ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+mkdir ~/.local/shared/nvim/plugged
 # inside vim run
 :PlugInstall
 ```

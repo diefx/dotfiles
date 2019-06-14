@@ -4,27 +4,28 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vim-airline/vim-airline'
 call plug#end()
 
-"Basic configuration
+" Basic configuration
 set number          " show line numbers
+set relativenumber  " show line numbers
 syntax enable       " highlight syntax
 set cursorline      " hightlight current line
 set termguicolors   " enable true color
 set background=dark " enable dark background
-let g:one_allow_italics=1
-let g:airline_theme='one'
 colorscheme one
+let g:one_allow_italics=1
 
+" format
 set tabstop=4       " width of tab character
 set softtabstop=4   " how many column the tab key insert
 set expandtab       " expand tabs into spaces
 
 " airline
+let g:airline_theme='one'
 let g:airline_detect_paste=1 " Show PASTE if in paste mode
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-
 " unicode symbols
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'

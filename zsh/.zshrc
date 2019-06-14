@@ -41,6 +41,7 @@ alias home="cd ~"
 alias dotfiles="cd ~/.config"
 alias tree="tree -CaL"
 alias shutdown="sudo /sbin/shutdown now"
+
 #--dotfiles 
 alias zshrc="nvim ~/.config/zsh/.zshrc"
 alias zshrst="source ~/.config/zsh/.zshrc"
@@ -60,12 +61,13 @@ alias zathurarc="nvim ~/.config/zathura/zathurarc"
 alias gits="git status"
 alias gita="git add ."
 alias gitc="git commit -m "
-alias gitchk="git checkout"
+alias gitk="git checkout"
 alias gitl="git log --oneline"
 alias gitp="git push -u origin master"
+alias gitd="git diff"
 #--dowload audio from yutube
 # Download single entry
-alias ytmp3="youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 "
+alias ytsong="youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 "
 # Download playlist
 alias ytplaylist="youtube-dl -ict --yes-playlist --extract-audio --audio-format mp3 --audio-quality 0 "
 

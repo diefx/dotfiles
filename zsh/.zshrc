@@ -96,3 +96,10 @@ function extract() {
     fi
 }
 
+# Change directory to code stm32f0 microcontrollers and open nvim with the most 
+# important files, main.c, interrupts and inits.c
+function code() {
+    cd ~/Code/Framework/test
+    nvim -O {main,inits,interrupts}.c
+}
+

@@ -103,28 +103,65 @@ label-empty              = %icon% %name%
 label-empty-padding      = 2
 
 
+;----------------------------------------------------------
+;FILESYSTEM SETTINGS
+;----------------------------------------------------------
 [module/filesystem]
-type = internal/fs
-interval = 25
+type                     = internal/fs
+interval                 = 25
 
-mount-0 = /
+mount-0                  = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
+label-mounted            = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%% of %total%
+label-unmounted          = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
 
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
+;----------------------------------------------------------
+;PULSEAUDIO SETTINGS
+;----------------------------------------------------------
+[module/pulseaudio]
+type                     = internal/pulseaudio
 
-format-prefix = " "
+format-volume            = <label-volume> <bar-volume>
+label-volume             = VOL  %percentage%%
+label-volume-foreground  = ${root.foreground}
+
+label-muted              =  Muted 
+label-muted-foreground   = #666
+
+bar-volume-width         = 10
+bar-volume-foreground-0  = #55aa55
+bar-volume-foreground-1  = #55aa55
+bar-volume-foreground-2  = #55aa55
+bar-volume-foreground-3  = #55aa55
+bar-volume-foreground-4  = #55aa55
+bar-volume-foreground-5  = #f5a70a
+bar-volume-foreground-6  = #ff5555
+bar-volume-gradient      = false
+bar-volume-indicator     = |
+bar-volume-indicator-font = 2
+bar-volume-fill           = ─
+bar-volume-fill-font      = 2
+bar-volume-empty          = ─
+bar-volume-empty-font     = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+
+;----------------------------------------------------------
+;KEYBOARD SETTINGS
+;----------------------------------------------------------
+[module/xkeyboard]
+type                     = internal/xkeyboard
+blacklist-0              = num lock
+
+format-prefix            = " "
 format-prefix-foreground = ${colors.red}
 
-label-layout = %layout%
+label-layout             = %layout%
 
-label-indicator-padding = 2
-label-indicator-margin = 1
+label-indicator-padding  = 2
+label-indicator-margin   = 1
 label-indicator-foreground = ${colors.red}
 
 
@@ -133,7 +170,6 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.cyan}
-;format-underline = ${colors.cyan}
 label = %percentage:2%%
 
 
@@ -142,7 +178,6 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.magent}
-;format-underline = ${colors.magent}
 label = %percentage_used%%
 
 
@@ -151,59 +186,32 @@ type = internal/network
 interface = enp9s0
 interval = 3.0
 
-;format-connected-underline = ${colors.green}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.green}
 label-connected = %local_ip%
 
-format-disconnected =
+format-disconnected-prefix = " "
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
 
-[module/pulseaudio]
-type = internal/pulseaudio
-
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
-label-volume-foreground = ${root.foreground}
-
-label-muted = 🔇 muted
-label-muted-foreground = #666
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
-
-
+;----------------------------------------------------------
+;DATE SETTINGS
+;----------------------------------------------------------
 [module/date]
-type = internal/date
-interval = 5
+type                     = internal/date
+interval                 = 5
 
-date = " %d-%m-%y"
-date-alt = " %Y-%m-%d"
+date                     = " %d-%B-%Y"
+date-alt                 = " %Y-%B-%d"
 
-time = %H:%M
-time-alt = %H:%M:%S
+time                     = %H:%M
+time-alt                 = %H:%M:%S
 
-format-prefix = " "
+format-prefix            = " "
 format-prefix-foreground = ${colors.blue}
-;format-underline = ${colors.blue}
 
 label = %date% %time%
 

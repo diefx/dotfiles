@@ -19,6 +19,13 @@ set tabstop=4       " width of tab character
 set softtabstop=4   " how many column the tab key insert
 set expandtab       " expand tabs into spaces
 
+" Shortcuting split navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+
 " airline
 let g:airline_theme='one'
 let g:airline_detect_paste=1 " Show PASTE if in paste mode

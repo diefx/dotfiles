@@ -34,11 +34,11 @@ super + Escape
 # ----------------------------------
 
 # focus the node in the given direction
-super + {_,shift +}{Left,Down,Up,Right}
+super + {_,shift +}{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus or send to the left or right desktop
-super + alt + {Right,Left}
+super + alt + {l,h}
 	DIR={next,prev}; \
  	bspc {desktop -f,node -d} "$DIR"
 	
@@ -51,7 +51,7 @@ super + alt + {Right,Left}
 # ----------------------------------
 
 # Preselect the direction
-super + ctrl + {Left,Down,Up,Right}
+super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
 # cancel the preselection
@@ -63,11 +63,12 @@ super + ctrl + Escape
 # -----------------------------------
 
 # expand a window by moving one of its side outward                                         
-ctrl + alt + {Left,Down,Up,Right}
+ctrl + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}                          
 
 # contract a window by moving one of its side inward                                        
-ctrl + shift + {Left,Down,Up,Right}                                                   
+
+ctrl + shift + {h,j,k,l}                                                   
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 

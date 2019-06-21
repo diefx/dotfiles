@@ -17,34 +17,54 @@ super + Return
 super + f
 	firefox
 
+# Close or kill app
+super + x 
+    bspc node -k
 
-# Bspwm hotkeys
+
+# Reload configurations files hotkeys
 # -----------------------------------
 
 # Quit bspwm normally
 super + alt + Escape
 	bspc quit
 
+# Reload bspwm config
+super + alt + b
+    killall vanela; bspwmrc
+
+# Reload zsh config
+super + alt + z
+    source $HOME/.config/zsh/.zshrc
+
+# Reload xresources config
+super + alt + r
+    xrdb $HOME/.config/X11/.Xresources
+
 # Reload sxhkd configuration
-super + Escape
+super + alt + s
 	pkill -USR1 -x sxhkd
 
 
 # Focus/swap configuration
 # ----------------------------------
 
-# focus the node in the given direction
-super + {_,shift +}{h,j,k,l}
+# focus or swap the node in the given direction
+super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
-# focus or send to the left or right desktop
+# focus to the left or right desktop
 super + alt + {l,h}
 	DIR={next,prev}; \
- 	bspc {desktop -f,node -d} "$DIR"
+ 	bspc desktop -f "$DIR"
 	
- #focus or send to the given desktop
- super + {_,shift + }{1-9,0}
- 	bspc {desktop -f,node -d} '^{1-9,10}'
+ #focus to the given desktop
+super + {1-9,0}
+ 	bspc desktop -f '^{1-9,10}'
+
+ # send and focus to the given desktop
+super + shift + {1-9,0}
+ 	bspc node -d '^{1-9,10}' -f
 
 
 # Preselections

@@ -5,19 +5,25 @@ set default-fg                  "#5C6370"
 set statusbar-bg                "#2C323C"
 set statusbar-fg                "#5C6370"
 
+set tabbar-bg                   "#282C34"
+set tabbar-fg                   "#5C6370"
+
+set tabbar-focus-bg             "#2C323C"
+set tabbar-focus-fg             "#61AFEF"
+
 set inputbar-bg                 "#2C323C"
 set inputbar-fg                 "#5C6370"
 
 set notification-bg             "#282a36"
 set notification-fg             "#f0f0f0"
 
-set notification-error-bg       "#282a36"
+set notification-error-bg       "#2C323C"
 set notification-error-fg       "#ff5c57"
 
-set notification-warning-bg     "#282a36"
+set notification-warning-bg     "#2C323C"
 set notification-warning-fg     "#ff5c57"
 
-set highlight-color             "#f3f99d"
+set highlight-color             "#D19A66"
 set highlight-active-color      "#57c7ff"
 
 set completion-bg               "#2C323C"
@@ -34,16 +40,18 @@ set recolor-darkcolor           "#5C6370"
 
 set recolor                     "true"
 set recolor-keephue             "false"
+
 #}}}
 
 
 #{{{ Layout
 set incremental-search          "false"
 set statusbar-home-tilde        "true"
-set statusbar-v-padding          10
+set statusbar-v-padding          4
 set statusbar-h-padding          10
+set page-padding                 2
 set adjust-open                 "width"
-set first-page-column           2
+set first-page-column            1
 set window-title-basename       "true"
 #}}}
 
@@ -58,23 +66,16 @@ set database                    "plain"
 #}}}
 
 #{{{ Key bindings
-map <PageUp>    scroll full_up
-map <PageDown>  scroll full_down
-map <BackSpace> scroll full_up all
-map <M-v>       scroll full_up
-map <C-v>       scroll full_down
-
-map + zoom in
-map - zoom out
-map q quit
-map w adjust_window width
-map z adjust_window bestfit
-
-map <Space>   navigate next
-map <S-Space> navigate previous
-map b toggle_statusbar
-
-map <C-g> abort
+map <C-i>    zoom in
+map <C-o>    zoom out
+map q        quit
+map w        adjust_window width
+map z        adjust_window bestfit
+map <C-j>    navigate next
+map <C-k>    navigate previous
+map b        toggle_statusbar
+map g        goto
+map <C-g>    abort
 #}}}
 
 

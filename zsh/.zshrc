@@ -56,6 +56,7 @@ alias rofirc="nvim ~/.config/rofi/config"
 alias polybarrc="nvim ~/.config/polybar/config"
 alias gitignore="nvim ~/.config/.gitignore"
 alias zathurarc="nvim ~/.config/zathura/zathurarc"
+alias zathurarc="zathura -d ~/.config/zathura/zathurarc"
 alias sxhkdrst="systemctl --user reload sxhkd"
 
 

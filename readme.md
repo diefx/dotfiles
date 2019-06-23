@@ -21,7 +21,7 @@ Installation of several packages
 --------------------------------
 Install editor, versioning coding, etc..
 ```bash
-$ sudo pacman -S neovim tree git rofi feh awesome-terminal-fonts zathura zathura-pdf-poppler firefox 
+$ sudo pacman -S neovim pyhton-neovim tree git rofi feh awesome-terminal-fonts zathura zathura-pdf-poppler firefox 
 arm-none-eabi-gcc arm-none-eabi-newlib openocd
 ```
 

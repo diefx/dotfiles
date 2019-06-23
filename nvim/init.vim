@@ -2,6 +2,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
     Plug 'rakr/vim-one'
     Plug 'vim-airline/vim-airline'
+    Plug 'SirVer/ultisnips'
 call plug#end()
 
 " Basic configuration
@@ -54,3 +55,10 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+
+" Trigger snippets configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<C-tab>"
+

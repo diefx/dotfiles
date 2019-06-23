@@ -17,8 +17,9 @@ let g:one_allow_italics=1
 
 " format
 set tabstop=4       " width of tab character
-set softtabstop=4   " how many column the tab key insert
+set softtabstop=0   " how many column the tab key insert
 set expandtab       " expand tabs into spaces
+set shiftwidth=4    " all character are four spaces
 
 " Shortcuting split navigation
 map <C-h> <C-w>h

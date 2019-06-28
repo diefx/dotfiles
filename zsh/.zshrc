@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.local/share/oh-my-zsh
+export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -73,6 +74,10 @@ alias gitd="git diff"
 alias ytsong="youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 "
 # Download playlist
 alias ytplaylist="youtube-dl -ict --yes-playlist --extract-audio --audio-format mp3 --audio-quality 0 "
+
+# Blogging tool alias
+alias jekyllp="cd ~/Blog/Diefx/_posts"
+alias jekylls="bundle exec jekyll serve"
 
 #--Enable autompletion
 autoload -Uz compinit

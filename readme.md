@@ -22,7 +22,6 @@ Installation of several packages
 Install editor, versioning coding, etc..
 ```bash
 $ sudo pacman -S neovim pyhton-neovim tree git rofi feh awesome-terminal-fonts zathura zathura-pdf-poppler firefox 
-arm-none-eabi-gcc arm-none-eabi-newlib openocd
 ```
 
 Instal two important components, polybar and our terminal with unicode and true color support
@@ -79,5 +78,20 @@ $ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw
 mkdir ~/.local/shared/nvim/plugged
 # inside vim run
 :PlugInstall
+```
+
+Embeeded tools
+-------------
+Becuase i'm and embedded enginner and old habits never dies
+```bash
+arm-none-eabi-gcc arm-none-eabi-newlib openocd
+```
+
+Blogging Pplatform
+-------------------
+let's share some expertise with the simple people, becasue i'm generous =). kekyll my official github page
+```bash
+sudo pacman -S ruby
+gem install jekyll bundler minima
 ```
 

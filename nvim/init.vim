@@ -3,6 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'rakr/vim-one'
     Plug 'vim-airline/vim-airline'
     Plug 'SirVer/ultisnips'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 call plug#end()
 
 " Basic configuration
@@ -62,4 +63,6 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<C-tab>"
+
+let g:mkdp_browser='firefox'
 

@@ -4,7 +4,8 @@ st.alpha:          1
 !Color theme (one dark) reference https://github.com/logico-dev/Xresources-themes
 st.cursorColor:    #ABB2BF
 st.background:     #282C34
-st.foreground:     #5C6370
+!st.foreground:     #5C6370
+st.foreground:     #ABB2BF
 st.highlightColor: #3A3F4B
 !Black & gray
 st.color0:         #282C34

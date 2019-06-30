@@ -1,18 +1,18 @@
 #{{{ Colours
 set default-bg                  "#282C34"
-set default-fg                  "#5C6370"
+set default-fg                  "#abb2bf"
 
 set statusbar-bg                "#2C323C"
-set statusbar-fg                "#5C6370"
+set statusbar-fg                "#abb2bf"
 
 set tabbar-bg                   "#282C34"
-set tabbar-fg                   "#5C6370"
+set tabbar-fg                   "#abb2bf"
 
 set tabbar-focus-bg             "#2C323C"
 set tabbar-focus-fg             "#61AFEF"
 
 set inputbar-bg                 "#2C323C"
-set inputbar-fg                 "#5C6370"
+set inputbar-fg                 "#abb2bf"
 
 set notification-bg             "#282a36"
 set notification-fg             "#f0f0f0"
@@ -27,16 +27,16 @@ set highlight-color             "#D19A66"
 set highlight-active-color      "#57c7ff"
 
 set completion-bg               "#2C323C"
-set completion-fg               "#5C6370"
+set completion-fg               "#abb2bf"
 
 set completion-group-bg         "#2C323C"
-set completion-group-fg         "#5C6370"
+set completion-group-fg         "#abb2bf"
 
 set completion-highlight-bg     "#61AFEF"
 set completion-highlight-fg     "#2C323C"
 
 set recolor-lightcolor          "#282C34"
-set recolor-darkcolor           "#5C6370"
+set recolor-darkcolor           "#abb2bf"
 
 set recolor                     "true"
 set recolor-keephue             "false"

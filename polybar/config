@@ -20,12 +20,9 @@
 ;VARIABLES
 ;----------------------------------------------------------
 [colors]
-background     = #282C34
-background-alt = #444
-foreground     = #5C6370
-foreground-alt = #5C6370
-primary        = #D194A66
-secondary      = #e60053
+background     = #282c34
+foreground     = #abb2bf
+foreground-alt = #2bb2bf
 alert          = #bd2c40
 red            = #E06C75
 green          = #98C379
@@ -47,7 +44,7 @@ width                    = 100%
 height                   = 25
 
 background               = ${colors.background}
-foreground               = ${colors.foreground}
+foreground               = ${colors.foreground} 
 
 border-top-size          = 5
 border-top-color         = ${colors.background}
